@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="/Fontawesome/css/all.css">
+
+
+</head>
+
+<body class="flex items-center justify-center min-h-dvh  bg-purple-100" id="cover">
+    <div class="bg-white w-[400px] rounded-md min-h-[70vh]
+    ">
+
+
+
+
+
+
+        <div class=" relative">
+            <input readonly class="w-full h-40 text-right text-4xl font-semibold border-none outline-none 
+             text-pink-700 bg-pink-300  px-3" id="show" value="0">
+
+            <div class=" absolute top-5 right-5" id="nightLight"><i class="fa-solid fa-moon text-lg text-zinc-800 "></i>
+            </div>
+
+            <div class=" absolute top-5 right-12 "
+             id="sunLight" ><i class="fa-solid fa-sun text-lg text-white "></i>
+            </div>
+
+        </div>
+
+        <div class="grid grid-cols-4 gap-2 p-8  justify-items-center w-full text-xl" id="calcBody">
+            <button
+                class=" numBtn w-12 h-12 rounded-full border-none bg-pink-100 text-pink-400 text-base  hover:bg-pink-200 active:bg-pink-50"
+                onclick="clearDisplay()">AC</button>
+
+            <div class=" numBtn w-12 h-12 rounded-full border-none bg-pink-100 text-pink-400 flex items-center justify-center hover:bg-pink-200 active:bg-pink-50 "
+                onclick="deleteText()"  >
+                <i class="fa-solid fa-delete-left  text-sm"></i>
+            </div>
+
+            <button
+                class=" numBtn w-12 h-12 rounded-full border-none bg-pink-100 text-pink-400 hover:bg-pink-200 active:bg-pink-50"
+                onclick="squareRoot()" >&radic;</button>
+
+
+            <div class=" operBtn w-12 h-12 rounded-full border-none bg-pink-400 text-white flex items-center justify-center  hover:bg-pink-500 active:bg-pink-400"
+                onclick="divide()" >
+                <i class="fa-solid fa-divide text-sm "></i>
+            </div>
+
+            <button
+                class=" numBtn w-12 h-12 rounded-full border-none bg-pink-100 text-pink-400  hover:bg-pink-200 active:bg-pink-50"
+                onclick="showDisplay(7)" >7</button>
+            <button
+                class=" numBtn w-12 h-12 rounded-full border-none bg-pink-100 text-pink-400 hover:bg-pink-200 active:bg-pink-50"
+                onclick="showDisplay(8)" >8</button>
+            <button
+                class=" numBtn w-12 h-12 rounded-full border-none bg-pink-100 text-pink-400 hover:bg-pink-200 active:bg-pink-50"
+                onclick="showDisplay(9)" >9</button>
+            <button
+                class=" operBtn w-12 h-12 rounded-full border-none bg-pink-400 text-white  hover:bg-pink-500 active:bg-pink-400"
+                onclick="multiply() " >x</button>
+            <button
+                class=" numBtn w-12 h-12 rounded-full border-none bg-pink-100 text-pink-400 hover:bg-pink-200 active:bg-pink-50"
+                onclick="showDisplay(4)" >4</button>
+            <button
+                class=" numBtn w-12 h-12 rounded-full border-none bg-pink-100 text-pink-400 hover:bg-pink-200 active:bg-pink-50"
+                onclick="showDisplay(5)" >5</button>
+            <button
+                class=" numBtn w-12 h-12 rounded-full border-none bg-pink-100 text-pink-400 hover:bg-pink-200 active:bg-pink-50"
+                onclick="showDisplay(6)" >6</button>
+            <button
+                class=" operBtn w-12 h-12 rounded-full border-none bg-pink-400 text-white hover:bg-pink-500 active:bg-pink-400"
+                onclick="showDisplay('-')" >-</button>
+            <button
+                class=" numBtn w-12 h-12 rounded-full border-none bg-pink-100 text-pink-400  hover:bg-pink-200 active:bg-pink-50"
+                onclick="showDisplay(1)" >1</button>
+            <button
+                class=" numBtn w-12 h-12 rounded-full border-none bg-pink-100 text-pink-400 hover:bg-pink-200 active:bg-pink-50"
+                onclick="showDisplay(2)" >2</button>
+            <button
+                class=" numBtn w-12 h-12 rounded-full border-none bg-pink-100 text-pink-400 hover:bg-pink-200 active:bg-pink-50"
+                onclick="showDisplay(3)" >3</button>
+            <button
+                class=" operBtn w-12 h-12 rounded-full border-none bg-pink-400 text-white  hover:bg-pink-500 active:bg-pink-400"
+                onclick="showDisplay('+')"  >+</button>
+            <button
+                class=" numBtn w-34 h-12 rounded-full border-none bg-pink-100 text-pink-400 col-span-2  hover:bg-pink-200 active:bg-pink-50"
+                onclick="showDisplay(0)" >0</button>
+            <!-- continue -->
+            <button
+                class=" numBtn w-12 h-12 rounded-full border-none bg-pink-100 text-pink-400  hover:bg-pink-200 active:bg-pink-50"
+                onclick="showDisplay('.')" >.</button>
+            <button
+                class="w-12 h-12 rounded-full border-none bg-pink-700 text-white text-sm hover:bg-pink-800 active:bg-pink-700"
+                onclick="calculate()" id="equalsBtn">=</button>
+        </div>
+    </div>
+
+
+    <script src="calculator.js"></script>
+
+</body>
+
+</html>
